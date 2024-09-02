@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int isPrime(int num) {
+    if(num < 2) return 0;
+    for(int i = 2; i * i <= num; i++) {
+        if(num % i == 0) return 0;
+    }
+    return 1;
+}
+
+int countTwoDigitPrimes(int n) {
+    int count = 0;
+    while(n >= 10) {
+        int twoDigit = n % 100;
+        if(isPrime(twoDigit)) {
+            count++;
+        }
+        n /= 10;
+    }
+    return count;
+}
+
+int main() {
+    int n = 114;
+    int result = countTwoDigitPrimes(n);
+    printf("Number of two-digit primes: %d\n", result);
+
+    return 0;
+}
