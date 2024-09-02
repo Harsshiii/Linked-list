@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int searchBook(int book_ids[], int n, int id) {
+    for(int i = 0; i < n; i++) {
+        if(book_ids[i] == id) {
+            return 1;  // Book found
+        }
+    }
+    return 0;  // Book not found
+}
+
+int main() {
+    int book_ids[] = {101, 102, 103, 104, 105};
+    int n = sizeof(book_ids)/sizeof(book_ids[0]);
+    int id = 103;
+
+    if(searchBook(book_ids, n, id)) {
+        printf("Book is available.\n");
+    } else {
+        printf("Book is not available.\n");
+    }
+
+    return 0;
+}
