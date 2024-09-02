@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+struct Square {
+    int side;
+    int area;
+};
+
+struct Rectangle {
+    int length;
+    int breadth;
+    int area;
+};
+
+int main() {
+    struct Square sq;
+    struct Rectangle rect;
+
+    // Example values
+    sq.side = 4;
+    sq.area = sq.side * sq.side;
+
+    rect.length = 5;
+    rect.breadth = 3;
+    rect.area = rect.length * rect.breadth;
+
+    printf("Square Area: %d\n", sq.area);
+    printf("Rectangle Area: %d\n", rect.area);
+
+    return 0;
+}
