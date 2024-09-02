@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int weights[5] = {5, 10, 15, 20, 25};  // Example weights of treasures
+    int totalWeight = 0;
+
+    for(int i = 0; i < 5; i++) {
+        totalWeight += weights[i];
+    }
+
+    printf("Total Weight Collected: %d\n", totalWeight);
+
+    return 0;
+}
